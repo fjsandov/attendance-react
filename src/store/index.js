@@ -2,6 +2,7 @@ import { createBrowserHistory } from 'history';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
 import thunkMiddleware from 'redux-thunk';
+// eslint-disable-next-line import/no-cycle
 import rootReducer from './ducks';
 
 export const history = createBrowserHistory();
