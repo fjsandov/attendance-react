@@ -40,7 +40,7 @@ export function login({ email: credentialsEmail, password }) {
     dispatch({ type: types.LOGIN });
     return getApi().session.login(credentialsEmail, password)
       .then(({
-        jwtToken, id, email, admin,
+        jwt_token: jwtToken, id, email, admin,
       }) => dispatch({
         type: types.LOGIN_SUCCESS,
         payload: {
